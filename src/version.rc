@@ -18,9 +18,9 @@ BEGIN
       BEGIN
         VALUE "FileVersion", VER_FILEVERSION_STR
         VALUE "CompanyName", "Tannin\0"
-        VALUE "FileDescription",  "NXM Link Proxy\0"
-        VALUE "OriginalFilename", "nxmhandler.exe\0"
-        VALUE "ProductName",      "NXM Handler\0"
+        VALUE "FileDescription",  "MWS Link Proxy\0"
+        VALUE "OriginalFilename", "mwshandler.exe\0"
+        VALUE "ProductName",      "MWS Handler\0"
         VALUE "ProductVersion", VER_FILEVERSION_STR
       END
     END

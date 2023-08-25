@@ -3,11 +3,11 @@
 
 #include <QString>
 
-namespace NxmHandler {
+namespace MwsHandler {
 
 void LoggerInit(const QString &fileName);
 void LoggerDeinit();
 
-}; //namespace NxmHandler
+}; //namespace MwsHandler
 
 #endif

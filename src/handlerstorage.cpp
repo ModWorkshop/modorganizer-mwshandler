@@ -9,7 +9,7 @@ static const QRegularExpression invalid_arguments("\"?%[0-9]+\"?");
 
 HandlerStorage::HandlerStorage(const QString &storagePath, QObject *parent)
   : QObject(parent)
-  , m_SettingsPath(storagePath + "/nxmhandler.ini")
+  , m_SettingsPath(storagePath + "/mwshandler.ini")
 {
   loadStore();
 }
@@ -26,9 +26,9 @@ void HandlerStorage::clear()
 
 void HandlerStorage::registerProxy(const QString &proxyPath)
 {
-  QSettings settings("HKEY_CURRENT_USER\\Software\\Classes\\nxm\\", QSettings::NativeFormat);
+  QSettings settings("HKEY_CURRENT_USER\\Software\\Classes\\mws\\", QSettings::NativeFormat);
   QString myExe = QString("\"%1\" ").arg(QDir::toNativeSeparators(proxyPath)).append("\"%1\"");
-  settings.setValue("Default", "URL:NXM Protocol");
+  settings.setValue("Default", "URL:MWS Protocol");
   settings.setValue("URL Protocol", "");
   settings.setValue("shell/open/command/Default", myExe);
   settings.sync();
@@ -218,7 +218,7 @@ void HandlerStorage::loadStore()
 
   // also register the global handler
   HandlerInfo info;
-  QSettings handlerReg("HKEY_CLASSES_ROOT\\nxm\\", QSettings::NativeFormat);
+  QSettings handlerReg("HKEY_CLASSES_ROOT\\mws\\", QSettings::NativeFormat);
   QStringList handlerValues(stripCall(handlerReg.value("shell/open/command/Default").toString()));
 
   info.ID = static_cast<int>(m_Handlers.size());
@@ -231,7 +231,7 @@ void HandlerStorage::loadStore()
   info.executable = handlerValues.front();
   handlerValues.pop_front();
   info.arguments = handlerValues.join(" ");
-  if (!info.executable.isEmpty() && !info.executable.endsWith("nxmhandler.exe", Qt::CaseInsensitive)) {
+  if (!info.executable.isEmpty() && !info.executable.endsWith("mwshandler.exe", Qt::CaseInsensitive)) {
     bool known = false;
     for (auto iter = m_Handlers.begin(); iter != m_Handlers.end(); ++iter) {
       if ((iter->executable == info.executable) && (iter->arguments  == info.arguments)) {

@@ -43,12 +43,12 @@
     <name>HandlerWindow</name>
     <message>
         <location filename="handlerwindow.ui" line="14"/>
-        <source>NXM Handler</source>
+        <source>MWS Handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="handlerwindow.ui" line="21"/>
-        <source>Use this list to configure programs to handle nxm links. Different Programs can be set up to handle links for different games. If the same game is supported by multiple binaries, the top-most is used.</source>
+        <source>Use this list to configure programs to handle mws links. Different Programs can be set up to handle links for different games. If the same game is supported by multiple binaries, the top-most is used.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -119,9 +119,9 @@
     </message>
     <message>
         <location filename="handlerwindow.cpp" line="120"/>
-        <source>This will make the nxmhandler.exe you called the primary handler registered in the system.
+        <source>This will make the mwshandler.exe you called the primary handler registered in the system.
 That has no immediate impact on how links are handled.
-Use this if you moved Mod Organizer or if you uninstalled the Mod Organizer installation that was previously registered. Continue?</source>
+Use this if you moved ModWorkshop Organizer or if you uninstalled the ModWorkshop Organizer installation that was previously registered. Continue?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -134,7 +134,7 @@ Use this if you moved Mod Organizer or if you uninstalled the Mod Organizer inst
     </message>
     <message>
         <location filename="main.cpp" line="126"/>
-        <source>A nxm handler from a different Mod Organizer installation has been registered. Do you want to replace it? This is usually not necessary unless the other installation is defective.</source>
+        <source>A mws handler from a different ModWorkshop Organizer installation has been registered. Do you want to replace it? This is usually not necessary unless the other installation is defective.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -144,7 +144,7 @@ Use this if you moved Mod Organizer or if you uninstalled the Mod Organizer inst
     </message>
     <message>
         <location filename="main.cpp" line="138"/>
-        <source>Mod Organizer is not set up to handle nxm links. Associate it with nxm links?</source>
+        <source>ModWorkshop Organizer is not set up to handle mws links. Associate it with mws links?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -171,8 +171,7 @@ Use this if you moved Mod Organizer or if you uninstalled the Mod Organizer inst
     <message>
         <location filename="main.cpp" line="264"/>
         <source>No application registered to handle this game (%1).
-If you expected Mod Organizer to handle the link, you have to go to Settings-&gt;Nexus and click the &quot;Associate with ... links&quot;-button.
-If you have NMM installed, you can re-register it for nxm-links so it handles the links that MO doesn&apos;t.</source>
+If you expected ModWorkshop Organizer to handle the link, you have to go to Settings-&gt;Modworkshop and click the &quot;Associate with ... links&quot;-button.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -8,7 +8,7 @@ build_script:
 - pwsh: >-
     $ErrorActionPreference = 'Stop'
 
-    git clone --depth=1 --no-single-branch https://github.com/ModOrganizer2/modorganizer-umbrella.git c:\projects\modorganizer-umbrella
+    git clone --depth=1 --no-single-branch https://github.com/ModWorkshop/modorganizer-umbrella.git c:\projects\modorganizer-umbrella
 
     New-Item -ItemType Directory -Path c:\projects\modorganizer-build
 
@@ -28,11 +28,11 @@ artifacts:
   name: nxmhandler_pdb
 on_success:
   - ps: Set-Location -Path $env:APPVEYOR_BUILD_FOLDER
-  - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHooks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
+  - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHoks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
   - ps: ./send.ps1 success $env:WEBHOOK_URL
 on_failure:
   - ps: Set-Location -Path $env:APPVEYOR_BUILD_FOLDER
   - ps: Push-AppveyorArtifact ${env:APPVEYOR_BUILD_FOLDER}\stdout.log
   - ps: Push-AppveyorArtifact ${env:APPVEYOR_BUILD_FOLDER}\stderr.log
-  - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHooks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
+  - ps: Invoke-RestMethod https://raw.githubusercontent.com/DiscordHoks/appveyor-discord-webhook/master/send.ps1 -o send.ps1
   - ps: ./send.ps1 failure $env:WEBHOOK_URL

@@ -117,7 +117,7 @@ void HandlerWindow::on_handlersWidget_customContextMenuRequested(const QPoint &p
 void HandlerWindow::on_registerButton_clicked()
 {
   if (QMessageBox::question(this, tr("Change handler registration?"),
-                            tr("This will make the nxmhandler.exe you called the primary handler registered in the system.\n"
+                            tr("This will make the mwshandler.exe you called the primary handler registered in the system.\n"
                                "That has no immediate impact on how links are handled.\nUse this if you moved Mod Organizer "
                                "or if you uninstalled the Mod Organizer installation that was previously registered. Continue?"),
                             QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes) {

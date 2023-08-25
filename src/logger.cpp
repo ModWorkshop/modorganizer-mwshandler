@@ -4,7 +4,7 @@
 #include <QDateTime>
 #include <QFile>
 
-namespace NxmHandler {
+namespace MwsHandler {
 
 static QFile g_File;
 
@@ -43,4 +43,4 @@ void LoggerDeinit()
   qInstallMessageHandler(NULL);
 }
 
-}; // namespace NxmHandler
+}; // namespace MwsHandler
